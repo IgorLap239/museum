@@ -135,8 +135,6 @@ nav {
   background-repeat: no-repeat;
   background-position: calc(100%) calc(0%);
   background: linear-gradient(to right, transparent, url("assets/img/welcome-slider/1.jpg"));
-  /*background:  linear-gradient(to right, #030303, #030303 calc(100% - 1000px), transparent calc(100% - 700px)),
-  url("assets/img/welcome-slider/1.jpg") no-repeat top right;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -573,10 +571,34 @@ nav {
   padding-bottom: 0px;
 }
 
-.gallery {
-  margin: 0px;
+.picture-container {
   margin-top: 75px;
   padding: 0px;
+  width: 1440px;
+  height: 1960px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.picture-inner-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 2380px;
+  flex-wrap: wrap;
+  column-count: 3;
+  column-gap: 36px;
+}
+
+.picture-inner-container > img {
+  margin-bottom: 24px;
+}
+
+.picture-inner-container > img:first-child {
+  margin-top: 50px;
+}
+
+.picture-inner-container > img:nth-child(9) {
+  margin-top: 50px;
 }
 
 .tickets-content {
@@ -754,6 +776,7 @@ nav {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  cursor: pointer;
 }
 
 .parallax {
@@ -899,10 +922,555 @@ nav {
   letter-spacing: 2px;
   }
 
-
 .social-icon > svg {
-  padding: 13px 17px;
-  border: 2px solid #666666;
+  border: 1px solid #666666;
   filter: drop-shadow(0px 0px 0px #666666);
   border-radius: 50%;
+}
+
+.social-icon-youtube > svg {
+  padding: 11px 12px;
+}
+
+.social-icon-insta > svg {
+  padding: 11px 12px;
+}
+
+.social-icon-fb > svg {
+  padding: 13px 17px;
+}
+
+.social-icon-twit > svg {
+  padding: 14px 13px;
+}
+
+.social-icon-pint > svg {
+  padding: 13px 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup-form {
+  width:100%;
+  min-height:100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.full-form-container {
+  margin-top: 65px;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.form-container {
+  width: 970px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 91px 90px;
+}
+
+.boocking-info {
+  max-width: 400px;
+}
+
+.form-title {
+  margin-bottom: 15px;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: inherit;
+  text-transform: uppercase;
+}
+
+.form-title-text {
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 0px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #710707;
+}
+
+.info-form {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-container > .boocking-info > hr {
+  margin: 0px;
+  margin-bottom: 60px;
+}
+
+.data-time {
+  margin: 0px;
+  margin-bottom: 20px;
+  padding: 0px;
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-form input {
+  height: 41px;
+  border: 1px solid #030303;
+  margin-bottom: 20px;
+  -webkit-date-placeholder: none; 
+}
+
+.data-time > input {
+  margin: 0px;
+  width: 150px;
+}
+
+.info-form svg {
+  text-align: center;
+  margin-top: 15px;
+  margin-right: -50px;
+  padding-left: 10px;
+  position: relative;
+  z-index: 1;
+  float: left;
+}
+
+.info-form svg + input {
+  padding-left: 35px;
+}
+
+input[type="date"]:not(.has-value):before, input[type="time"]:not(.has-value):before{
+  color: #030303;
+  content: attr(placeholder);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator, input[type="time"]::-webkit-calendar-picker-indicator {
+  margin: 0px;
+  margin-left: 5px;
+  margin-right: 9px;
+  opacity: 1;
+  display: block;
+  background: url("./assets/svg/arrow.svg") no-repeat;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #030303;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-block svg {
+  margin-right: -22px;
+}
+
+.email-input svg {
+  margin-top: 18px;
+  margin-right: -24px;
+}
+
+.tel-input svg {
+  margin-top: 10px;
+}
+
+.input-block > input {
+  width: 400px;
+}
+
+.select-block > svg {
+  margin-right: -25px;
+}
+
+.ticket-type-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("./assets/svg/arrow.svg") no-repeat right center;
+  background-position: bottom 13px right 13px;
+  width: 400px;
+  height: 44px;
+  border: 1px solid #030303;
+  margin-bottom: 20px;
+  padding-left: 45px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.ticket-type-select::-ms-expand {
+  display: none;
+}
+
+.ticket-counters-block {
+  width: 368px;
+  padding: 10px 15px;
+  border: 1px solid #030303;;
+}
+
+.boocking-info > svg {
+  margin: 0px;
+  margin-bottom: -5px;
+}
+
+.boocking-info > hr {
+  height: 3px;
+}
+
+.form-ticket-counters-title {
+  margin: 0px;
+  color: #9D8665;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.form-ticket-counters {
+  margin: 0px;
+  margin-top: 15px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-counters-block > hr {
+  margin: 0px;
+  margin-top: 5px;
+  height: 2px;
+  opacity: 0.9;
+}
+
+.form-ticket-counters > .counter-label {
+  margin-bottom: 0px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.form-ticket-counters > .counter-label:first-child {
+  padding-bottom: 8px;
+}
+
+.form-ticket-counters > .ticket-counter {
+  margin-bottom: 15px;
+  background-color: #000000;
+  width: 105px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+
+.form-ticket-counters > .ticket-counter:last-child {
+  margin-bottom: 0px;
+}
+
+.form-ticket-counters button {
+  background-color: #000000;
+  color: #FFFFFF;
+  height: 18px;
+  border: none;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.form-ticket-counters > .ticket-counter > input {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  max-width: 25px;
+  max-height: 25px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  border: none;
+  text-align: center;
+}
+
+.pay-info {
+  width: 470px;
+  border: 1px solid #030303;
+  padding: 25px 30px 26px 30px;
+}
+
+.overview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.overview-title {
+  margin: 0px;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  color: #272727;
+}
+
+.overview-text {
+  margin: 0px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #740C11;
+  opacity: 0.9;
+}
+
+.visit-day-info {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6px;
+}
+
+.visit-day-info:last-child {
+  margin-bottom: 0px;
+}
+
+.visit-day-info > svg {
+  margin-top: 3px;
+  margin-right: 15px;
+}
+
+.visit-day-info > p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.ticket-outcome {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.total-tickets-number {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.total-tickets-number > p {
+  margin: 0px;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.total-tickets-number > input {
+  margin: 0px;
+  margin-right: 10px;
+  padding: 0px;
+  padding-top: 2px;
+  max-width: 32px;
+  height: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #030303;
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  color: #A4A4A3;
+}
+
+.ticket-outcome > p {
+  margin-bottom: 8px;
+  width: 50%;
+  text-align: right;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.outcome > hr {
+  margin: 0px;
+  margin-bottom: 10px;
+  height: 2px;
+}
+
+.total-price {
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.total-price > p {
+  margin: 0px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+}
+
+.pay-form {
+  margin: 10px auto 26px;
+  width: 470px;
+  position: relative;
+}
+
+.pay-form input {
+  width: 100%;
+  margin: 0px;
+  margin-top: 5px;
+  padding: 0px;
+  padding-left: 10px;
+  height: 35px;
+  border: none;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+
+.card-front {
+  background-color: #BCBCBC;
+  padding: 15px 20px;
+}
+
+.card-back {
+  top: 30px;
+  right: 0;
+  z-index: -2;
+  background-color: #939393;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 360px;
+  height: 211px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+
+.first-card-block {
+  margin: 0px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-main-info {
+  width: 215px;
+}
+
+#card-number {
+  width: 205px;
+  margin-bottom: 10px;
+}
+
+.exp-container > label {
+  width: 100%;
+}
+
+.exp-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.exp-container input {
+  width: 90px;
+}
+
+.exp-container input[type="number"]::-webkit-outer-spin-button, 
+.exp-container input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  background: #FFFFFF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAKUlEQVQYlWNgwAT/sYhhKPiPT+F/LJgEsHv37v+EMGkmkuImoh2NoQAANlcun/q4OoYAAAAASUVORK5CYII=) no-repeat center center;
+  width: 20px;
+  border-left: 0.5px solid #A4A4A3;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.pay-systems {
+  margin-top: 20px;
+}
+
+#card-holder {
+  width: 310px;
+}
+
+.card-stripe {
+  margin-top: 25px;
+  width: 100%;
+  height: 45px;
+  background-color: #161615;
+}
+
+.cvc-container {
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+  position: relative;
+  top: 15px;
+  left: 265px;
+  align-items: center;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #161615;
+}
+
+#card-cvc {
+  width: 65px;
+  margin-bottom: 6px;
+}
+
+.book-button {
+  margin: 0px;
+  margin-top: 250px;
+  margin-left: 250px;
+  width: 220px;
+  height: 45px;
+  background: #710707;
+  opacity: 0.9;
+  border: none;
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
 }
