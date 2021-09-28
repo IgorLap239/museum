@@ -11,8 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.wrapper {
   width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1, h2, h3 {
@@ -124,6 +126,11 @@ nav {
   color: #FFFFFF;
 }
 
+.nav-link:hover {
+  color: #9d8665;
+  transition: 0.5s;
+}
+
 .welcome-section {
   padding: 0px;
 }
@@ -168,6 +175,11 @@ nav {
   background: #710707;
   padding: 25px 64px;
   border-radius: 10px;
+}
+
+.welcome-link:hover {
+  background-color: #9D8665;
+  transition: 0.5s;
 }
 
 .slider-nav {
@@ -223,38 +235,57 @@ nav {
   cursor: pointer;
 }
 
-.slider-dots li.slick-active button {
+.slider-dots li button:hover {
   background-color: #9D8665;
+  transition: 0.5s;
 }
+
+/*.slider-dots li.slick-active button {
+  background-color: #9D8665;
+}*/
 
 .arrow-buttons {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
-.left-arrow {
+.left-arrow-button {
   margin: 0px;
   margin-right: 20px;
   padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   outline: none; 
   background-color: black;
-  background-image: url("assets/svg/left arrow.svg");
   width: 30px;
   height: 8px;
   cursor: pointer;
 }
 
-.rigth-arrow {
+.rigth-arrow-button {
   margin: 0px;
   padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   outline: none; 
   background-color: black;
-  background-image: url("assets/svg/right arrow.svg");
   width: 30px;
   height: 8px;
   cursor: pointer;
+}
+
+#rigth-arrow, #left-arrow {
+  fill: #FFFFFF;
+}
+
+#rigth-arrow:hover, #left-arrow:hover {
+  fill: #9D8665;
+  transition: 0.5s;
 }
 
 .tour-link {
@@ -286,12 +317,17 @@ nav {
 .tour-title::after {
   content: "";
   position: absolute;
-  max-width: 300px;
+  width: 300px;
   bottom: -10px;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background-color: #710707;
+}
+
+.tour-link:hover .tour-title::after{
+  width: 100%;
+  transition: 2s;
 }
 
 .tour-info-header {
@@ -689,18 +725,18 @@ nav {
 	background: #000000;
 }
 
-.tickets-counters {
+.tickets-form .tickets-counters {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.tickets-form-header {
+.tickets-form .tickets-form-header {
   margin: 0px;
   margin-bottom: 25px;
 }
 
-.counter-label {
+.tickets-form .counter-label {
   margin: 0px;
   margin-bottom: 15px;
   width: 150px;
@@ -710,7 +746,7 @@ nav {
   text-align: left;
 }
 
-.ticket-counter {
+.tickets-form .ticket-counter {
   display: flex;
   margin: 0px;
   padding: 0px;
@@ -751,7 +787,7 @@ nav {
   text-align: center;
 }
 
-.total-price {
+.tickets-form .total-price {
   margin: 0px;
   margin-top: 35px;
   padding: 0px;
@@ -763,7 +799,7 @@ nav {
   letter-spacing: 1.65px;
 }
 
-.buy {
+.tickets-form .buy {
   margin: 0px;
   margin-top: 55px;
   width: 175px;
@@ -919,7 +955,22 @@ nav {
   font-size: 22px;
   line-height: 22px;
   letter-spacing: 2px;
-  }
+  cursor: default;
+}
+
+.footer-info-link {
+  color:#FFFFFF;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+}
+
+.footer-info-link:hover {
+  color: #9D8665;
+  transition: 0.5s;
+}
 
 .social-icon > svg {
   border: 1px solid #666666;
@@ -1182,7 +1233,10 @@ input::placeholder {
   background-color: #000000;
   width: 105px;
   height: 25px;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
   border: 1px solid #000000;
 }
 
@@ -1302,6 +1356,7 @@ input::placeholder {
   font-size: 18px;
   line-height: 21px;
   color: #A4A4A3;
+  cursor: default;
 }
 
 .ticket-outcome > p {
@@ -1458,6 +1513,7 @@ input::placeholder {
 
 .book-button {
   margin: 0px;
+  position: relative;
   margin-top: 250px;
   margin-left: 250px;
   width: 220px;
@@ -1477,4 +1533,24 @@ input::placeholder {
   top: 30px;
   right: 30px;
   cursor: pointer;
+}
+
+.book-button:hover {
+  background-color: #9D8665;
+  transition: 0.5s;
+}
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
