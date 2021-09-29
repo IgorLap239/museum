@@ -279,14 +279,14 @@ nav {
   cursor: pointer;
 }
 
-#rigth-arrow, #left-arrow {
+/*#rigth-arrow, #left-arrow {
   fill: #FFFFFF;
 }
 
 #rigth-arrow:hover, #left-arrow:hover {
   fill: #9D8665;
   transition: 0.5s;
-}
+}*/
 
 .tour-link {
   text-decoration: none;
