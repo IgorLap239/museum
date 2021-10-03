@@ -9,19 +9,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
     popupBtn.addEventListener('click', () => {
       popup.style.display = 'block';
-      const draw = (timePassed) => {
-        popupContent.style.left = timePassed / 30 + 'px';
-      };
+      if (+window.innerWidth > 1024) {
+        const draw = (timePassed) => {
+          popupContent.style.left = timePassed / 30 + 'px';
+        };
 
-      const start = Date.now();
-      const timer = setInterval(() => {
-        const timePassed = Date.now() - start;
-        if (timePassed >= 2000) {
-            clearInterval(timer);
-            return;
-        }
-        draw(timePassed);
-      }, 20);
+        const start = Date.now();
+        const timer = setInterval(() => {
+          const timePassed = Date.now() - start;
+          if (timePassed >= 2000) {
+              clearInterval(timer);
+              return;
+          }
+          draw(timePassed);
+        }, 20);
+      }
     });
 
     popup.addEventListener('click', (event) => {
