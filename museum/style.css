@@ -1958,3 +1958,523 @@ span.ripple {
     padding-bottom: 5px;
   }
 }
+
+@media (max-width: 768px) {
+  :root {
+    --font1: 40px;
+    --font2: 24px;
+    --font3: 20px;
+    --font4: 16px;
+    --font5: 16px;
+    --ln-hgt1: 60px;
+    --ln-hgt2: 28px;
+    --ln-hgt3: 23px;
+    --ln-hgt4: 19px;
+    --ln-hgt5: 19px;
+    --lt-spcg1: 5px;
+    --sect-padding: 40px;
+    --head-heigth: 110px;
+    --welc-heigth: 861px;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .container {
+    width: 728px;
+  }
+
+  hr {
+    margin: 0px;
+    margin-top: 20px;
+    background-color: var(--dark-red);
+    height: 3px;
+  }
+
+  .welcome-container {
+    background-size: 728px 546px;
+    background-position: 0px 215px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .welcome-title {
+    line-height: 60px;
+  }
+
+  .welcome-info {
+    width: 100%;
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  .welcome-link {
+    display: none;
+  }
+
+  .slider-nav {
+    min-width: 100%;
+    height: 100px;
+    justify-content: center;
+  }
+
+  .top-slider-counter {
+    margin-left: 0px;
+  }
+
+  .tour-items {
+    margin-top: 38px;
+    padding: 0px 54px 40px;
+    justify-content: space-around;
+    row-gap: 40px;
+  }
+
+  .tour-item {
+    width: 280px;
+  }
+
+  .tour-pic {
+    width: 280px;
+    height: 180px;
+  }
+  
+  .tour-title {
+    margin-top: 19px;
+    letter-spacing: 2px;
+  }
+
+  .tour-title::after {
+    width: 150px;
+    height: 2px;
+  }
+
+  .tour-link .tour-title::after{
+    width: 150px;
+    transition: 2s;
+  }
+
+  .tour-info-header {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .tour-info-footer {
+    margin: 0px;
+    margin-top: 8px;
+  }
+
+  .explore-container {
+    flex-direction: column;
+  }
+
+  .explore-info {
+    width: 100%;
+  }
+
+  .explore-info > .section-title::after {
+    width: 728px;
+  }
+
+  .explore-text {
+    display: none;
+  }
+
+  .explore-slider {
+    margin: 0px auto;
+    margin-top: 62px;
+  }
+
+  .explore-slider img {
+    width: 728px;
+    height: 705px;
+  }
+
+  .video-section {
+    padding-top: 40px;
+    padding-bottom: 78px;
+  }
+
+  .main-video {
+    margin-top: 19px;
+  }
+
+  .player {
+    width: 100%;
+    height: 329px;
+  }
+
+  .video-start {
+    top: 32%;
+    left: 45%;
+    width: 80px;
+    height: 80px;
+    background-image: url("assets/svg/play_768.svg");
+    border: 3px solid #FFFFFF;
+    border-radius: 50%;
+    background-position: 60% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .player-control {
+    position: relative;
+    margin-top: -8px;
+    padding: 0px 30px;
+    height: 60px;
+    justify-content: space-between;
+    z-index: 2;
+  }
+
+  .play {
+    height: 29px;
+    background-image: url(./assets/svg/play_button_768.svg);
+  }
+
+  .progress {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 0;
+    left: 0;
+    border: none;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+
+  .progress::-webkit-slider-thumb {
+    width: 13px;
+    height: 13px;
+  }
+
+  .mute {
+    width: 27px;
+    height: 21px;
+    background-image: url(./assets/svg/volume_1024.svg);
+  }
+
+  .volume {
+    width: 468px;
+    height: 5px;
+    border-top: 4px solid #030303;
+    border-bottom: 4px solid #030303;
+  }
+  
+  .volume::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+  }
+
+  .fullscreen {
+    width: 27px;
+    height: 27px;
+    background-image: url("./assets/svg/fullscreen_1024.svg");
+  }
+
+  .video-playlist {
+    margin-top: 19px;
+    overflow-x: hidden;
+  }
+
+  .video-item {
+    margin-right: 20px;
+  }
+
+  .video-item img {
+    width: 354px;
+    height: 199px;
+  }
+
+  .youtube-icon {
+    top: 36%;
+    left: 40%;
+  }
+
+  .playlist-control {
+    margin-top: 12px;
+  }
+
+  .playlist-control .slider-dots li button {
+    width: 10px;
+    height: 10px;
+  }
+
+  .gallery-section {
+    position: relative;
+    max-height: 1220px;
+    overflow-y: hidden;
+  }
+
+  .picture-container {
+    max-height: 1080px;
+    margin-top: 40px;
+    overflow-x: hidden;
+  }
+
+  .picture-inner-container {
+    max-height: 2020px;
+    column-gap: 24px;
+  }
+
+  .picture-inner-container img {
+    width: 352px;
+  }
+
+  .picture-inner-container > img:nth-child(11) {
+    margin-top: 0px;
+  }
+
+  .picture-inner-container > img:nth-child(11) {
+    margin-top: 50px;
+  }
+
+  .tickets-content {
+    margin-top: 38px;
+  }
+
+  .tickets-img {
+    width: 444px;
+    height: 340px;
+  }
+
+  .tickets-form {
+    margin-right: 50px;
+  }
+
+  .tickets-form .tickets-form-header {
+    margin-bottom: 36px;
+  }
+
+  .tickets-form > .tickets-counters > .counter-label {
+    margin-bottom: 10px;
+  }
+
+  .tickets-form > .tickets-counters > .ticket-counter {
+    width: 170px;
+    justify-content: space-around;
+    margin-bottom: 25px;
+  }
+
+  .tickets-form > .tickets-counters > .total-price {
+    width: 175px;
+    margin-top: 15px;
+  }
+  
+  .tickets-form .buy {
+    margin-top: 25px;
+  }
+
+  .parallax {
+    width: 768px;
+    height: 300px;
+    background-position: center;
+  }
+
+  .contacts-content {
+    margin-top: 38px;
+    margin-bottom: 17px;
+    flex-direction: column;
+  }
+
+  .organization-name {
+    margin-bottom: 50px;
+  }
+
+  .contact-info {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .contact-link {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .map {
+    margin-top: 25px;
+    width: 728px;
+    height: 476px;
+  }
+
+  .main-footer {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  .footer-content {
+    flex-wrap: wrap;
+    padding-bottom: 35px;
+  }
+
+  .footer-name {
+    margin-right: 96px;
+  }
+
+  .footer-nav-list{
+    margin-top: 9px;
+  }
+
+  .footer-nav-list:first-child {
+    margin-right: 184px;
+  }
+
+  .footer-nav-item > .nav-link {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .social-icons > li {
+    margin-right: 23px;
+  }
+
+  .social-links {
+    margin-top: 50px;
+    margin-left: 300px;
+  }
+
+  .main-footer hr{
+    height: 1px;
+    border: none;
+  }
+
+  .footer-info {
+    padding-top: 40px;
+  }
+
+  .popup-form {
+    width: 100%;
+  }
+
+  .full-form-container {
+    width: 590px;
+    height: 1479px;
+    overflow-y: scroll;
+  }
+
+  .form-container {
+    width: 530px;
+    height: 2000px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 75px 30px 28px 30px;
+    overflow-y: scroll;
+  }
+
+  .boocking-info {
+    max-width: 530px;
+  }
+
+  .info-form {
+    width: 530px;
+    margin-bottom: 50px;
+  }
+
+  .form-container > .boocking-info > hr {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .popup-form input {
+    width: 500px;
+    height: 41px;
+    border: 1px solid #030303;
+    margin-bottom: 20px;
+    -webkit-date-placeholder: none; 
+  }
+
+  .data-time > input {
+    width: 210px;
+    margin-bottom: 0px;
+  }
+
+  .ticket-type-select {
+    width: 530px;
+  }
+
+  .ticket-counters-block {
+    width: 500px;
+  }
+
+  .form-ticket-counters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .form-ticket-counters > .counter-label {
+    margin-right: 100px;
+  }
+
+  .form-ticket-counters > .ticket-counter > input {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 35px;
+  }
+
+  .pay-info {
+    width: 500px;
+    border: 1px solid #030303;
+    padding: 25px 15px 26px 15px;
+  }
+
+  .ticket-outcome {
+    margin-top: 25px;
+    padding-bottom: 5px;
+  }
+
+  .total-tickets-number {
+    margin-bottom: 3px;
+  }
+
+  .total-tickets-number > input {
+    height: 18px;
+    margin-bottom: 0px;
+  }
+
+  .total-tickets-number > p {
+    padding: 0px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .ticket-outcome > p {
+    margin-bottom: 0px;
+  }
+
+  .pay-form {
+    margin: 14px auto 29px;
+    width: 500px;
+    position: relative;
+  }
+
+  .pay-form input {
+    width: 100%;
+    margin: 0px;
+    margin-top: 5px;
+    padding: 0px;
+    padding-left: 10px;
+    height: 35px;
+    border: none;
+    font-size: 12px;
+    line-height: 14px;
+    color: #161615;
+  }
+
+  .exp-container input {
+    width: 90px;
+  }
+  .book-button {
+    margin-left: 280px;
+  }
+
+  .close {
+    top: 25px;
+    right: 25px;
+  }
+}
