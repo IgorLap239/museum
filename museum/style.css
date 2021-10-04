@@ -152,6 +152,53 @@ nav {
   transition: 0.5s;
 }
 
+.burger-menu-button {
+  display: none;
+  cursor: pointer;
+}
+
+.stripe1, .stripe2, .stripe3 {
+  width: 32px;
+  height: 2px;
+  background-color: #FFFFFF;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .stripe1 {
+  --webkit-transform: rotate(-45deg) translate(-10px, 9px);
+  transform: rotate(-45deg) translate(-10px, 9px);
+}
+
+.change .stripe2 {
+  opacity: 0;
+}
+
+.change .stripe3 {
+  --webkit-transform: rotate(45deg) translate(-1px, -3px);
+  transform: rotate(45deg) translate(-1px, -3px);
+}
+
+.popup-menu {
+  display: none;
+  position: absolute;
+  top: 130px;
+  left: 0px;
+  width: 297px;
+  height: 585px;
+  background-color: var(--bg-dark);
+  z-index: 2;
+}
+
+.popup-menu > ul {
+  flex-direction: column;
+  margin-left: 55px;
+}
+
+.popup-menu > ul > li {
+  margin-bottom: 25px;
+}
+
 .welcome-section {
   padding: 0px;
 }
@@ -296,15 +343,6 @@ nav {
   height: 8px;
   cursor: pointer;
 }
-
-/*#rigth-arrow, #left-arrow {
-  fill: #FFFFFF;
-}
-
-#rigth-arrow:hover, #left-arrow:hover {
-  fill: #9D8665;
-  transition: 0.5s;
-}*/
 
 .tour-link {
   text-decoration: none;
@@ -1154,26 +1192,6 @@ nav {
   background-position: bottom 13px right 13px;
 }
 
-/*input[type="date"]:not(.has-value):before, input[type="time"]:not(.has-value):before{
-  color: #030303;
-  content: attr(placeholder);
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator, input[type="time"]::-webkit-calendar-picker-indicator {
-  margin: 0px;
-  margin-left: 5px;
-  margin-right: 9px;
-  opacity: 1;
-  display: block;
-  background: url("./assets/svg/arrow.svg") no-repeat;
-  cursor: pointer;
-}*/
-
 input::placeholder {
   color: #030303;
   font-family: Roboto;
@@ -1638,6 +1656,16 @@ span.ripple {
     margin-top: 20px;
     background-color: var(--dark-red);
     height: 3px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .burger-menu-button {
+    width: 32px;
+    height: 30px;
+    display: inline-block;
   }
 
   .welcome-container {
