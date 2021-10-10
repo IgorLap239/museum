@@ -515,17 +515,6 @@ nav {
   cursor: ew-resize;
 }
 
-/*.resizer:after {
-  background: transparent;
-  content: "";
-  position:absolute;
-  margin: 0 0 0 -15px;
-  width:30px;
-  height:30px;
-  border-radius:50%;
-  border:3px solid white;
-}*/
-
 .video-section {
   padding-top: 70px;
 }
@@ -1010,6 +999,29 @@ nav {
   font-weight: 300;
   font-size: var(--font4);
   line-height: var(--ln-hgt4);
+}
+
+.map {
+  margin: 0px;
+  padding: 0px;
+  width: 960px;
+  height: 620px;
+}
+
+.marker {
+  background-image: url('./assets/svg/greyMarker.svg');
+  background-size: cover;
+  width: 30px;
+  height: 35px;
+  cursor: pointer;
+}
+
+#marker {
+  background-image: url('./assets/svg/blackMarker.svg');
+}
+   
+.mapboxgl-popup {
+  max-width: 200px;
 }
 
 .main-footer {
