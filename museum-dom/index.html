@@ -215,29 +215,30 @@
             <h2 class="section-title video-title">Video journey</h2>
             <p class="video-text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
           </div>
-            <div class="main-video">
-              <img class="player" src="./assets/img/Preview.png" alt="">
-              <button class="video-start"></button>
-              <div class="player-control">
-                <button class="play"></button>
-                <input class="progress" type="range" value="40" min="0" max="100" step="1">
-                <button class="mute"></button>
-                <input class="volume" type="range" id='volume' min=0 max=1 step=0.01 value='1'>
-                <button class="fullscreen"></button>
-              </div>
+          <div class="main-video">
+            <video class="video-player viewer" src="./assets/video/video0.mp4" poster="./assets/video/poster0.jpg"></video>
+            <button class="video-start"></button>
+            <div class="player-control">
+              <button class="play toggle"></button>
+              <input class="progress player__slider" type="range" value="0" min="0" max="100" step="1" id="progress">
+              <button class="mute"></button>
+              <input class="volume player__slider" type="range" id='volume' min=0 max=1 step=0.01 value='1'>
+              <button class="fullscreen"></button>
             </div>
+          </div>
+          <div class="video-slider-wrapper">
             <div class="video-playlist">
               <div class="video-item">
-                <img class="youtube-prewiev" src="./assets/img/Video_slide_item_1.png" width="452" height="254" alt="">
-                <button class="youtube-icon"></button>
+                <iframe width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="video-item">
-                <img class="youtube-prewiev" src="./assets/img/Video_slide_item_2.png" width="452" height="254" alt="">
-                <button class="youtube-icon"></button>
+                <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="video-item">
-                <img class="youtube-prewiev" src="./assets/img/Video_slide_item_3.png" width="452" height="254" alt="">
-                <button class="youtube-icon"></button>
+                <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="video-item">
+                <iframe width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
             <div class="playlist-control">
@@ -251,6 +252,7 @@
               </ul>
               <button class="rigth-switch"></button>
             </div> 
+          </div>
         </div>
       </div>
     </section>
@@ -581,5 +583,8 @@
   <script src="./src/explore-slider.js"></script>
   <script src="./src/validation.js"></script>
   <script src="./src/mapbox.js"></script>
+  <script src="./src/video-player.js"></script>
+  <script src="./src/progress.js"></script>
+  <!--<script src="./src/video-slider.js"></script>-->
 </body>
 </html>

@@ -60,8 +60,6 @@ const welcomeSlider = () => {
     prevSlide() {
       if (this.isTransitioEnd) {
         --this.currentPosition;
-        console.log("currentPosition = ", this.currentPosition);
-        console.log("slide number = ", this.slides);
         this.wrap.style.transform = `translateX(-${this.currentPosition * this.options.widthSlide}%)`;
         this.isTransitioEnd = false;
         if (this.currentPosition >= 5) {
@@ -85,7 +83,6 @@ const welcomeSlider = () => {
       if (this.isTransitioEnd) {
         if (this.options.infinity || this.options.position < this.options.widthSlide) {
           ++this.currentPosition;
-          console.log("currentPosition = ", (this.currentPosition));
           this.wrap.style.transform = `translateX(-${this.currentPosition * this.options.widthSlide}%)`;
           if (this.currentPosition > 5) {
             this.sliderDots[(this.currentPosition - 6)].classList.remove('slick-active');
