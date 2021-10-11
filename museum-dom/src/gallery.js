@@ -16,11 +16,16 @@ const galleryShaffle = () => {
 
   shuffle(imgAdress);
   imgAdress.map(function(e) {
+    const imgContainer = document.createElement('div');
+    imgContainer.classList.add('img-container');
+    imgContainer.classList.add('_anim-items')
     const img = document.createElement('img');
     img.classList.add('gallery-img')
+    img.classList.add('_anim-show')
     img.src = `${e}`;
     img.alt = ``;
-    pictureInnerContainer.append(img);
+    imgContainer.append(img);
+    pictureInnerContainer.append(imgContainer);
     return;
   });
 }

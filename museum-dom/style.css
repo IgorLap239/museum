@@ -775,16 +775,30 @@ input[type=range]::-webkit-slider-thumb {
   column-gap: 36px;
 }
 
-.picture-inner-container > img {
+.img-container {
+  display: block;
+  margin: 0px;
   margin-bottom: 24px;
 }
 
-.picture-inner-container > img:first-child {
+.picture-inner-container > div:first-child {
   margin-top: 50px;
 }
 
-.picture-inner-container > img:nth-child(11) {
+.picture-inner-container > div:nth-child(11) {
   margin-top: 50px;
+}
+
+._anim-show {
+  transform:  scale(0.5);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+._anim-show._active,
+._active ._anim-show {
+  opacity: 1;
+  transform:  scale(1);
 }
 
 .tickets-content {
